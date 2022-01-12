@@ -1,13 +1,32 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Button, StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import Rewards from './Rewards';
+import Feed from './Feed';
+import Map from './Map';
+import Discover from './Discover';
+
+const Tab = createBottomTabNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+<NavigationContainer>
+      <Tab.Navigator
+      screenOptions={{header: () => null}}>
+        <Tab.Screen
+          name="Feed"
+          component={Feed}/>
+        <Tab.Screen
+          name="Discover"
+          component={Discover}/>
+        <Tab.Screen
+          name="Map"
+          component={Map}/>
+          <Tab.Screen
+            name="Rewards"
+            component={Rewards}/>
+      </Tab.Navigator>
+    </NavigationContainer>
   );
 }
 
