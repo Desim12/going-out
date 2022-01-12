@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "going-out",
+    "slug": "going-out",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "going-out"
+}
