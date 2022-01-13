@@ -17,7 +17,7 @@ function discoverComponent() {
   function Discover() {
     return (
         <Stack.Navigator screenOptions={{header: () => null}}>
-          <Stack.Screen name="Rewards Tab" component={discoverComponent} />
+          <Stack.Screen name="Discover Tab" component={discoverComponent} />
         </Stack.Navigator>
     );
   }
